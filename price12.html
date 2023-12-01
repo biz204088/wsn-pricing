@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Price Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <img src="logo.png" alt="Company Logo">
+    <div class="container">
+        <h1>Proposal Price Calculator</h1>
+        <div class="form-row">
+            <div>
+                <label for="totalUsers">Total Users</label>
+                <input type="number" id="totalUsers" min="1" step="1" value="1">
+            </div>
+            <div>
+                <label for="plan">Product Tier</label>
+                <select id="plan" multiple>
+                    <option value="basic" selected>Basic</option>
+                    <option value="dispatch" selected>Dispatch</option>
+                    <option value="plus" selected>Plus</option>
+                </select>
+            </div>
+            <div>
+                <label for="term">Years</label>
+                <select id="term" multiple>
+                    <option value="1" selected>1</option>
+                    <option value="3">3</option>
+                    <option value="5" selected>5</option>
+                </select>
+            </div>
+        </div>
+        <button id="calculateButton">Calculate</button> <!-- Changed here -->
+    </div>
+
+    <!-- Toggle Switch for More Details -->
+    <div class="toggle-container">
+        <label class="toggle-switch">
+            <input type="checkbox" id="detailsToggle" checked>
+            <span class="slider round"></span>
+        </label>
+        <span>More Details</span>
+    </div>
+<div class="results-container" style="margin-top: -100px;"> 
+    <!-- Result Containers -->
+    <div id="result" class="results-container"></div>
+    <div id="result-summary" class="results-container"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
